@@ -1,0 +1,61 @@
+<!--pages/myinfo/myinfo.wxml-->
+<form bindsubmit="formSubmit">
+<view class="weui-cells weui-cell_input">
+ 
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="name" placeholder="请输入姓名" value='{{name}}' />
+                </view>
+            </view>
+            
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">性别</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="sex" value='{{sex}}'/>
+                </view>
+            </view>
+ 
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">年龄</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="age"  placeholder="请输入年龄" value='{{age}}' />
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">所在城市</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="no" placeholder="请输入城市" value='{{no}}'/>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">旅行偏好</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="like" placeholder="请输入旅行偏好" value='{{like}}'/>
+                </view>
+            </view>
+        </view>
+        <view class="btn-area">
+         <button type='primary' formType="submit">提交</button>
+         </view>
+        </form>
+
+
+
+
+
+
+
+

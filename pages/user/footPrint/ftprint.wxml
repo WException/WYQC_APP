@@ -1,0 +1,26 @@
+<view class="box1">
+  <text class="title">我的足迹</text>
+  <navigator url="{{zuji.url}}" wx:for="{{zuji}}" wx:for-item="zuji">
+    <view class="box1-1">
+      <image class="showimg" src="{{zuji.imgsrc}}"></image>
+      <view class="box1-1-1">
+        <text class="jdname">{{zuji.jdname}}</text>
+        <navigator class="danmu" url="{{zuji.danmurl}}">点我发弹幕>></navigator>
+      </view>
+      <!--
+      <view class="box1-1-2">
+        <image class="photo">{{zuji.jlphoto}}</image>
+      </view>
+      -->
+    </view>
+    
+
+  </navigator>
+</view>
+<view class="box2">
+  <text class="title">我的游记</text>
+  <navigator url="./record">
+
+  </navigator>
+  
+</view>

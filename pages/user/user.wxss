@@ -1,0 +1,69 @@
+.cloud{
+ 
+}
+.kong{
+  width: 100%;
+  height: 250rpx;
+  margin-top: 18rpx;
+}
+.avatar{
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  position:relative;
+  top: -226rpx;
+  left: 28rpx;
+}
+.username{
+ margin-left: 255rpx;
+ position:relative;
+ bottom: 348rpx;
+ font-size: 30rpx;
+}
+
+.list-wrapper{
+  margin-top: -220rpx;
+  width: 100%;
+}
+.div-line{
+  background: #6c7272;
+  width: 100%;
+  height: 2rpx;
+}
+
+.list-item {
+  width: 100%;
+  height: 100rpx;
+ 
+}
+
+.list-item_active {
+  background-color:rgb(159, 199, 233);
+  color: whitesmoke;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+}
+.item-text {
+  position: fixed;
+  left: 18rpx;
+  font-size: 32rpx;
+  
+}
+
+.item-array {
+  position: fixed;
+  right: 50rpx;
+  font-size: 34rpx;
+  color: #848c8f;
+  font-weight: bold;
+}
+

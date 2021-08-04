@@ -1,0 +1,41 @@
+
+<!-- 轮播图 -->
+<view class="box2">
+  <swiper autoplay="true" interval="3000" circular="true" indicator-dots="true">
+    <view>
+      <swiper-item wx:for="{{img}}" wx:for-item="img">
+        <view>
+          <image src="{{img}}"></image>
+        </view>
+      </swiper-item>
+    </view>
+  </swiper>
+</view>
+<!-- 总介绍 -->
+<view class="box3">
+  <text class="box3_text1">千佛山</text>
+</view>
+<view class="box4" selectable="true" scrolly="true">
+  <text class="th-text" disabled='true'  style="overflow-y:auto;overflow-x:scroll;" selectable="true"
+>千佛山位于山东省济南市历下区，是济南三大名胜之一，古称历山，因为古史称舜在历山耕田的缘故，又曾名舜山和舜耕山。隋开皇年间（581年一600年），因佛教盛行，随山势雕刻了数千佛像，故称千佛山。
+千佛山是泰山的余脉，海拔285米，占地166.1公顷，距济南市中心2.5公里，位于山东省济南市中心南部，与趵突泉、大明湖并称济南三大名胜，是国家AAAA级旅游景区，是第九批国家级风景名胜区。
+2016年9月5日，千佛山摩崖石像及碑刻群挂牌山东省文物保护单位。</text>
+</view>
+<!-- 分景点介绍 -->
+<view class="box5">
+  <text class="box5_text">主要景点</text>
+  <view class="view_tupian_wenzi">
+      <image class="image_1" src="/pages/wyimg/08f790529822720e35402b9771cb0a46f31fabd5.jpg" mode="widthFix"/>
+      <view class="view_wenzi2">
+        <text>万佛洞</text>
+        <text class="text_small">万佛洞位于千佛山北麓，是千佛山的一大胜景，兴建于1992年。塑造佛祖、菩萨、弟子、天王近3万尊，最大卧佛长28米，洞前矗立的大佛高15米，洞内壁画1万余平方米。万佛洞由四部分构成，分别为：莫高集锦、龙门精华、麦积奇观、云冈荟萃。洞长500米，记载了中国佛教发展历史的变迁，蕴藏着深厚的文化内涵。</text>
+      </view>
+    </view>
+    <view class="view_tupian_wenzi2">
+      <image class="image_1" src="/pages/wyimg/3812b31bb051f81964f21fabdab44aed2f73e778.jpg" mode="widthFix"/>
+      <view class="view_wenzi2">
+        <text>观音园</text>
+        <text class="text_small">观音园园内，池岸峭石矗立，矶石卧波，秀石点饰。四围垂荫，时鸟欢歌。池内水清见底，荷花艳开，金鲤戏游。内设喷泉，溅珠泄玉，彩虹映日，蔚为大观。矗立在荷花池中的是"白衣观音"高达13米，为观音园中最大者。</text>
+      </view>
+    </view>
+</view>

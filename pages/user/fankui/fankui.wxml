@@ -1,0 +1,38 @@
+<view class="cloud">
+
+<view> 
+  <view class="kong"></view>        
+<open-data class = "avatar"
+  type="userAvatarUrl"></open-data>
+<open-data class = "username"
+type="userNickName"></open-data>
+  <view hidden="{{isLogin}}">hidden
+    <button open-type="getUserInfo"
+      bindgetuserinfo="onGotUserInfo">获取用户信息</button> 
+     
+  </view> 
+ 
+</view>
+<view class="yijian"><button open-type='feedback'>意见反馈</button></view>
+<view class = "boox"></view>
+<view>{{msg}}</view>
+<view wx:for="{{list}}" wx:key="{{index}}">
+{{index}}{{item}}
+</view>
+<view wx:if="{{isLogin}}"></view>
+<view wx:else>请登录</view>
+<view hidden="{{isLogin}}">hidden</view>
+
+<view class="list-wrapper">
+    <block wx:for="{{menuitems}}" wx:key="item">
+      <navigator url="{{item.url}}" class="list-item" hover-class="list-item_active">
+        <view class='item'>
+          
+          <text class="item-text">{{item.text}}</text>
+          <text class='item-array'>></text>
+        </view>
+        <view class="div-line"></view>
+      </navigator>
+    </block>
+  </view>
+</view>

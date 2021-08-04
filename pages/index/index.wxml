@@ -1,0 +1,57 @@
+<!-- 天气和通知 -->
+<view class="box1">
+  <view class="box1_1">
+    <image src="https://pic.imgdb.cn/item/60fa2cd75132923bf88a960b.png" class="box1_img"></image>
+    <text class="box1_text1">29℃</text>
+    <text class="box1_text1">晴</text>
+  </view>
+  <view class="box1_2">
+    <image src="https://pic.imgdb.cn/item/60fa36b75132923bf8a48d17.png" class="box1_img"></image>
+    <!-- <text class="box1_2_text1">{{tongzhi}}</text> -->
+    <view class="box1_2_1">
+      <swiper  autoplay="true" interval="3000" circular="true" vertical="true">
+        <view wx:for="{{tongzhi}}">
+          <swiper-item>
+            <text>{{item.key}}</text>
+          </swiper-item>
+        </view>
+      </swiper>
+    </view>
+  </view>
+</view>
+<!-- 轮播图 -->
+<view class="box2">
+  <swiper autoplay="true" interval="3000" circular="true" next-margin="50rpx" previous-margin="50rpx">
+    <view>
+      <swiper-item wx:for="{{img}}" wx:for-item="img">
+        <view>
+          <image src="{{img.imgsrc}}"></image>
+        </view>
+      </swiper-item>
+    </view>
+  </swiper>
+</view>
+<!-- 济南文化 -->
+<view class="box3">
+  <text class="box3_text1">著名景点:</text>
+</view>
+<view class="box4">
+  
+</view>
+<!-- 今日景点推荐 -->
+<view class="box5">
+  <text class="box5_text">今日推荐:</text>
+  <navigator url="{{jingdian.url}}" wx:for="{{jingdian}}" wx:for-item="jingdian">
+    <view class="box5_1">
+      <image src="{{jingdian.imgsrc}}"></image>
+      <view class="box5_1_1">
+        <view class="box5_1_1_1">
+          <text class="title">{{jingdian.title}}</text>
+        </view>
+        <view class="box5_1_1_2">
+          <text class="value">{{jingdian.value}}</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>

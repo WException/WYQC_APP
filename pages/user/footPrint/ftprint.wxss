@@ -1,0 +1,24 @@
+.showimg{
+  width:30%;
+  height:140rpx;
+}
+.box1-1{
+  display: flex;
+  margin:20rpx;
+  border: #6495ED solid 1rpx;
+}
+.box1-1-1{
+  margin:20rpx;
+}
+image{
+  margin:10rpx;
+}
+.danmu{
+  position: relative;
+  top: 50rpx;
+  left: 240rpx;
+}
+.title{
+  font-size: x-large;
+  margin: 20rpx;
+}
