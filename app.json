@@ -10,7 +10,8 @@
     "pages/user/fankui/fankui",
     "pages/user/yours/yours",
     "pages/user/footPrint/record",
-    "pages/user/footPrint/rcfpgn/jilu"
+    "pages/user/footPrint/rcfpgn/jilu",
+    "pages/collect/collect"
   ],
   "tabBar": {
     "color": "#000000",

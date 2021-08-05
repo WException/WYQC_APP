@@ -54,13 +54,37 @@ swiper swiper-item image{
 }
 .box4{
   width: 700rpx;
-  height: 300rpx;
-  background-color: #f5f5f0;
+  height: 150rpx;
   margin: 0 auto;
 }
 .box3_text1{
   font-weight: bold;
 }
+
+.boss{
+  display: flex;
+  flex-wrap: wrap;
+}
+.box4 swiper{
+  height: 50rpx;
+  width: 650rpx;
+  /* background-color: brown; */
+}
+.vswiper{
+  height: 50rpx;
+  width: 650rpx;
+}
+image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.vimg{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+
 /* 
   第四层
   今日景点推荐
@@ -80,7 +104,8 @@ swiper swiper-item image{
   border: #6495ED solid 1rpx;
   display: flex;
   /* 阴影效果 */
-  box-shadow: 5px 5px 5px #888888;
+  /* box-shadow: 5px 5px 5px #888888; */
+  box-shadow: 5px 5px 2px 1px rgba(88, 88, 88, .2)
 }
 .box5_1 image{
   margin-top: 20rpx;

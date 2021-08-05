@@ -1,0 +1,19 @@
+<!--pages/collect/collect.wxml-->
+<!--收藏页面-->
+<view class="box5">
+  <text class="box5_text">我的收藏:</text>
+  <navigator url="/pages/Demo3/Demo3?index={{item}}" wx:for="{{jingdian}}" wx:key="index" wx:for-item="jingdian">
+    <view class="box5_1">
+      <image src="{{jingdian.imgsrc}}"></image>
+      <view class="box5_1_1">
+        <view class="box5_1_1_1">
+          <text class="title">{{jingdian.title}}</text>
+        </view>
+        <view class="box5_1_1_2">
+          <text class="value">{{jingdian.value}}</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>
+

@@ -10,9 +10,9 @@
     <!-- <text class="box1_2_text1">{{tongzhi}}</text> -->
     <view class="box1_2_1">
       <swiper  autoplay="true" interval="3000" circular="true" vertical="true">
-        <view wx:for="{{tongzhi}}">
+        <view wx:for="{{tongzhi.key}}" wx:key="index">
           <swiper-item>
-            <text>{{item.key}}</text>
+            <text>{{item}}</text>
           </swiper-item>
         </view>
       </swiper>
@@ -23,33 +23,46 @@
 <view class="box2">
   <swiper autoplay="true" interval="3000" circular="true" next-margin="50rpx" previous-margin="50rpx">
     <view>
-      <swiper-item wx:for="{{img}}" wx:for-item="img">
+      <swiper-item wx:for="{{img.url}}"  wx:key="index">
         <view>
-          <image src="{{img.imgsrc}}"></image>
+          <image src="{{item.imgsrc}}"></image>
         </view>
       </swiper-item>
     </view>
   </swiper>
 </view>
-<!-- 济南文化 -->
+<!-- 弹幕墙 -->
 <view class="box3">
-  <text class="box3_text1">著名景点:</text>
+  <text class="box3_text1">弹幕墙:</text>
 </view>
 <view class="box4">
-  
+  <navigator class="boss" url="/pages/text/text" wx:for="{{danmu.time}}" wx:key="index">
+  <view class="vimg">
+    <image src="https://pic.imgdb.cn/item/6108aa425132923bf8c3c3b7.png" alt=""/>
+  </view>
+  <view class="vswiper">
+    <swiper autoplay="true" interval="{{item}}" circular="true" vertical="true">
+      <swiper-item wx:for="{{danmu.data}}" wx:key="index">
+        <text>{{item.text}}</text>
+        <text>-----</text>
+        <text>{{item.user}}</text>
+      </swiper-item>
+    </swiper>
+  </view>
+</navigator>
 </view>
 <!-- 今日景点推荐 -->
 <view class="box5">
   <text class="box5_text">今日推荐:</text>
-  <navigator url="{{jingdian.url}}" wx:for="{{jingdian}}" wx:for-item="jingdian">
+  <navigator url="/pages/collect/collect?index={{item}}" wx:for="{{jingdian.data}}" wx:key="index">
     <view class="box5_1">
-      <image src="{{jingdian.imgsrc}}"></image>
+      <image src="{{item.imgsrc}}"></image>
       <view class="box5_1_1">
         <view class="box5_1_1_1">
-          <text class="title">{{jingdian.title}}</text>
+          <text class="title">{{item.title}}</text>
         </view>
         <view class="box5_1_1_2">
-          <text class="value">{{jingdian.value}}</text>
+          <text class="value">{{item.value}}</text>
         </view>
       </view>
     </view>
