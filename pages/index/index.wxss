@@ -73,6 +73,7 @@ swiper swiper-item image{
 .vswiper{
   height: 50rpx;
   width: 650rpx;
+  /* border: #666 solid 1px; */
 }
 image{
   width: 50rpx;

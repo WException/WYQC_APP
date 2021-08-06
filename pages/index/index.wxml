@@ -36,7 +36,7 @@
   <text class="box3_text1">弹幕墙:</text>
 </view>
 <view class="box4">
-  <navigator class="boss" url="/pages/text/text" wx:for="{{danmu.time}}" wx:key="index">
+  <navigator class="boss" url="/pages/danmu/danmu" wx:for="{{danmu.time}}" wx:key="index">
   <view class="vimg">
     <image src="https://pic.imgdb.cn/item/6108aa425132923bf8c3c3b7.png" alt=""/>
   </view>
@@ -54,7 +54,7 @@
 <!-- 今日景点推荐 -->
 <view class="box5">
   <text class="box5_text">今日推荐:</text>
-  <navigator url="/pages/collect/collect?index={{item}}" wx:for="{{jingdian.data}}" wx:key="index">
+  <navigator url="/pages/posts/posts?index={{item}}" wx:for="{{jingdian.data}}" wx:key="index">
     <view class="box5_1">
       <image src="{{item.imgsrc}}"></image>
       <view class="box5_1_1">
