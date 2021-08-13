@@ -1,4 +1,7 @@
 // pages/Demo/Demo.js
+var barrageHeight_arr = [5,55,105];
+var barrage_style_obj ={};
+var barrage_style_arr =[];
 Page({
   data: {
     img: {url: [{
@@ -20,18 +23,53 @@ Page({
       value:"千佛山古称历山；相传上古虞舜帝为民时，曾躬耕于历山之下，故亦名舜山或舜耕山。据史载：隋朝年间，山东佛教盛行，虔诚的教徒依山沿壁镌刻了为数较多的石佛，建千佛寺而得名千佛山。"
     }]},
     tongzhi: {key: ["第一条通知","第二条通知","第三条通知"]},
-    danmu:{data: [
-      {text: "这个小程序太好用了！",user: "张三"},
-      {text: "大明湖yyds!!!!!!!!!",user: "李四"},
-      {text: "千佛山偶遇走起",user: "王五"}
+    barrage_style: [
+      {
+        barrageTime: "2021/8/12",
+        barrageText: "测试",
+        barrageHeight: 5,
+        barrageWidth: 400,
+      },
+      {
+        barrageTime: "2021/8/12",
+        barrageText: "测试",
+        barrageHeight: 55,
+        barrageWidth: 500,
+      },
+      {
+        barrageTime: "2021/8/12",
+        barrageText: "测试",
+        barrageHeight: 105,
+        barrageWidth: 600,
+      },
     ],
-    time:[3000,2500,3500]}
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var thit = this;
+    setInterval(this.barrageText_move,10);
+    barrage_style_arr = [
+      {
+        barrageTime: "2021/8/12",
+        barrageText: "测试",
+        barrageHeight: 5,
+        barrageWidth: 400,
+      },
+      {
+        barrageTime: "2021/8/12",
+        barrageText: "测试",
+        barrageHeight: 55,
+        barrageWidth: 500,
+      },
+      {
+        barrageTime: "2021/8/12",
+        barrageText: "测试",
+        barrageHeight: 105,
+        barrageWidth: 600,
+      },
+    ];
     // wx.request({
     //   url: 'http://localhost:8080/Maven_Web/servletTest',
     //   data: {
@@ -43,5 +81,33 @@ Page({
     //     console.log(res.data);
     //   }
     // })
+  },
+  barrageText_move: function(){
+    var timerNum = barrage_style_arr.length;
+    var textMove;// 宽度
+    for(var i=0;i<timerNum;i++){
+       textMove = barrage_style_arr[i].barrageWidth;
+       //console.log("barrage_style_arr["+i+"].barrageWidth----------:"+barrage_style_arr[i].barrage_phoneWidth);
+       textMove = textMove -1;
+      barrage_style_arr[i].barrageWidth = textMove;
+      //走完的移除掉
+      if(textMove<=1){
+ //         clearTimeout(this.timer);
+          barrage_style_arr.splice(0,1);
+          i--;
+          // 全部弹幕运行完
+          if(barrage_style_arr.length==0){
+            this.setData({
+              barrage_style:barrage_style_arr, 
+            })
+            // clearInterval(this.timer);
+            return;
+          }
+      }
+      //console.log("第"+i+"个定时器:",textMove);
+      this.setData({
+        barrage_style:barrage_style_arr,
+      })
+    }
   },
 })

@@ -1,5 +1,5 @@
 /* 
-  第一层
+  天气和通知
 */
 .box1{
   margin-left: 10rpx;
@@ -31,7 +31,7 @@
   color: #666;
 }
 /* 
-  第二层
+  轮播图
 */
 .box2{
   margin: 20rpx 0;
@@ -46,7 +46,7 @@ swiper swiper-item image{
   border-radius: 20rpx;
 }
 /* 
-  第三层
+  弹幕墙
 */
 .box3{
   width: 700rpx;
@@ -56,38 +56,35 @@ swiper swiper-item image{
   width: 700rpx;
   height: 150rpx;
   margin: 0 auto;
-}
-.box3_text1{
-  font-weight: bold;
-}
-
-.boss{
   display: flex;
-  flex-wrap: wrap;
-}
-.box4 swiper{
-  height: 50rpx;
-  width: 650rpx;
-  /* background-color: brown; */
-}
-.vswiper{
-  height: 50rpx;
-  width: 650rpx;
-  /* border: #666 solid 1px; */
-}
-image{
-  width: 50rpx;
-  height: 50rpx;
 }
 .vimg{
   width: 50rpx;
-  height: 50rpx;
+  height: 150rpx;
 }
-
-
-
+.vtext{
+  width: 650rpx;
+  height: 150rpx;
+  position: relative;
+  /* 超出部分弹幕隐藏 */
+  overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.vtext>text{
+  position: absolute;
+  /* left: ;
+  right: ; */
+  
+}
+.iconfont{
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  line-height: 50rpx;
+}
 /* 
-  第四层
   今日景点推荐
 */
 .box5{
@@ -142,5 +139,3 @@ image{
   -webkit-box-orient: vertical;
   color: #666;
 }
-
-

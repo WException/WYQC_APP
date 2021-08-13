@@ -1,1 +1,24 @@
 /* pages/danmu/danmu.wxss */
+page{
+    height: 100%;
+}
+/* 历史弹幕 */
+.barrage-past{
+    display: block;
+    height: 95%;
+}
+.barrage-past>text{
+    display: block;
+}
+/* 弹幕输入部分(整体) */
+.barrage-inputText{
+    display: flex;
+}
+/* 弹幕输入框 */
+.barrage-input>input{
+    display: block;
+    width: 500rpx;
+    border: black solid 1px;
+    margin-right: 50rpx;
+    margin-top: 5rpx;
+}

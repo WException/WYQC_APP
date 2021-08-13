@@ -1,66 +1,46 @@
 // pages/danmu/danmu.js
+var barrage_style_obj ={};
+var barrage_style_arr =[];
+var timer;
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+  //页面的初始数据
   data: {
-
+    barrage_style: [],
+    barrageValue: "",
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  //生命周期函数--监听页面加载
   onLoad: function (options) {
-
+    timer = setInterval(this.timerFun,500);
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 定时器要执行的函数
+  timerFun:function(){
+    
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 发送按钮
+  shoot:function(e) {
+    var myDate = new Date();
+    
+    barrage_style_obj={
+      barrageTime: myDate.toLocaleDateString(), // 弹幕发送的时间
+      barrageText: this.data.barrageValue, // 弹幕的文本内容
+    };
+    barrage_style_arr.push(barrage_style_obj);
+    this.setData({
+      //发送弹幕 
+      barrage_style: barrage_style_arr,
+      //清空输入框
+      barrageValue: ""
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  //绑定输入框，将值传递给data里的barrageValue，输入框失去焦点时被调用
+  bindInput: function(e){
+    this.setData({
+      barrageValue:e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

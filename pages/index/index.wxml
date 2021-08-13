@@ -35,26 +35,22 @@
 <view class="box3">
   <text class="box3_text1">弹幕墙:</text>
 </view>
-<view class="box4">
-  <navigator class="boss" url="/pages/danmu/danmu" wx:for="{{danmu.time}}" wx:key="index">
-  <view class="vimg">
-    <image src="https://pic.imgdb.cn/item/6108aa425132923bf8c3c3b7.png" alt=""/>
-  </view>
-  <view class="vswiper">
-    <swiper autoplay="true" interval="{{item}}" circular="true" vertical="true">
-      <swiper-item wx:for="{{danmu.data}}" wx:key="index">
-        <text>{{item.text}}</text>
-        <text>-----</text>
-        <text>{{item.user}}</text>
-      </swiper-item>
-    </swiper>
+<navigator url="/pages/danmu/danmu">
+  <view class="box4">
+    <view class="vimg">
+      <text wx:for="{{3}}" class="iconfont icon-danmu"></text>
+    </view>
+    <view class="vtext">
+      <block>
+        <text wx:for="{{barrage_style}}" style="left:{{item.barrageWidth}}rpx;top:{{item.barrageHeight}}rpx;">{{item.barrageText}}</text>
+      </block>
+    </view>
   </view>
 </navigator>
-</view>
 <!-- 今日景点推荐 -->
 <view class="box5">
   <text class="box5_text">今日推荐:</text>
-  <navigator url="/pages/posts/posts?index={{item}}" wx:for="{{jingdian.data}}" wx:key="index">
+  <navigator url="/pages/posts/posts?index={{item.title}}" wx:for="{{jingdian.data}}" wx:key="index">
     <view class="box5_1">
       <image src="{{item.imgsrc}}"></image>
       <view class="box5_1_1">

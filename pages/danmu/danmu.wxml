@@ -1,2 +1,16 @@
 <!--pages/danmu/danmu.wxml-->
-<text>弹幕发送页面</text>
+<!-- 历史弹幕 -->
+<view class="barrage-past">
+  <block wx:for="{{barrage_style}}" wx:key="index">
+    <text>{{item.barrageText}}</text>
+  </block>
+</view>
+<!-- 弹幕输入框及发送按钮 -->
+<view class="barrage-inputText">
+  <view class="barrage-input">
+    <input bindblur="bindInput" value="{{barrageValue}}"/>
+  </view>
+  <view class="barrage-button">
+    <button class="shoot" size="mini" bindtap="shoot">发送</button>
+  </view>
+</view>

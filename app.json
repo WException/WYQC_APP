@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/map/maps",
     "pages/logs/logs",
@@ -12,7 +13,11 @@
     "pages/user/footPrint/record",
     "pages/user/footPrint/rcfpgn/jilu",
     "pages/collect/collect",
-    "pages/danmu/danmu"
+    "pages/danmu/danmu",
+    "pages/posts/posts",
+    "pages/text2/text2",
+    "pages/text/text"
+    
   ],
   "tabBar": {
     "color": "#000000",
@@ -42,7 +47,7 @@
     ],
     "window": {
       "backgroundTextStyle": "light",
-      "navigationBarBackgroundColor": "#fff",
+      "navigationBarBackgroundColor": "#ffffff",
       "navigationBarTitleText": "微游",
       "navigationBarTextStyle": "black"
     },
